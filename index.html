@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link href="./thuCss.css" rel="stylesheet">
+    <!--font chu-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="C:\Users\peakk\Documents\Zalo Received Files\jquery-3.7.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--bootstrap icon cam xoa-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "#">
+                <img src = "./logo.png" alt = "site icon">
+                <span class = "text-uppercase fw-lighter ms-2"></span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <span><i class="bi bi-cart-plus"></i></span>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <span><i class="bi bi-heart-fill"></i></span>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <span><i class="bi bi-search"></i></span>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#header">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#collection">new review</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#special">specials 12/12</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#blogs">Celebrity reviews</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#about">about us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- header -->
+    <header id = "header" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px;">
+        <div class = "container h-100 d-flex align-items-center carousel-inner">
+            <div class = "text-center carousel-item active">
+                <h2 class = "text-capitalize text-white">Welcome to the technology review website</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">PEAK</h1>
+            </div>
+            <div class = "text-center carousel-item">
+                <h2 class = "text-capitalize text-white">We always provide the best service to everyone</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">See reviews below</h1>
+            </div>
+        </div>
+
+        <button class = "carousel-control-prev" type = "button" data-bs-target="#header" data-bs-slide = "prev">
+            <span class = "carousel-control-prev-icon"></span>
+        </button>
+        <button class = "carousel-control-next" type = "button" data-bs-target="#header" data-bs-slide = "next">
+            <span class = "carousel-control-next-icon"></span>
+        </button>
+    </header>
+    <!-- end of header -->
+
+    <!-- collection -->
+    <section id = "collection" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center">
+                <h2 class = "position-relative d-inline-block">new review</h2>
+            </div>
+
+            <div class = "row g-0">
+                <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type = "button" class = "btn m-2 text-dark active-filter-btn" data-filter = "*">All</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".best">computer vs phone</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".feat">learning aids</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".new">Houseware</button>
+                </div>
+
+                <div class = "collection-list mt-4 row gx-0 gy-3">
+                    <!--sản phẩm 1 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham1.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">iPhone 15 Pro Max </p>
+                            <span class = "fw-bold">30.010.000₫ </span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal1" >Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal -->
+                                <div class="modal" id="videoModal1" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/nrJUVfYsuWg?si=TUm6WiSa9agDcaFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 2 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham2.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">OPPO Find N3 Flip </p>
+                            <span class = "fw-bold">22.990.000₫ </span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal2">Review </button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal -->
+                                <div class="modal" id="videoModal2" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/y67oOKGPv4Y?si=L1vC82x1g0w_tqFi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 3 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham3.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Laptop Asus TUF Gaming F15 FX507ZC4</p>
+                            <span class = "fw-bold">21.990.000₫ </span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal3">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá </button>
+                                <!-- Modal3 -->
+                                <div class="modal" id="videoModal3" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/4i_2YbwAU3o?si=vle685rEyfZsvscN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 4 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham4.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">MacBook Pro 13 inch M2 2022</p>
+                            <span class = "fw-bold">30.190.000₫</span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal4">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal4 -->
+                                <div class="modal" id="videoModal4" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/XsiztZEoStM?si=meAZqBE0gZ_coKa9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 5 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham5.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Google Tivi OLED Sony 4K 55 inch XR-55A80L</p>
+                            <span class = "fw-bold">43.090.000₫ </span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal5">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal3 -->
+                                <div class="modal" id="videoModal5" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/S7WCkdq9ww8?si=aatJYVfzOYH2qhrq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 6 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham6.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Đồng hồ thông minh Xiaomi Watch 2 Pro 46 mm</p>
+                            <span class = "fw-bold">5.990.000₫</span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal6">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal3 -->
+                                <div class="modal" id="videoModal6" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/tY2qCRPHQPI?si=PrhEFdq5JPGUMcYX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 7 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham7.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Apple Watch SE 2022 GPS 40mm viền nhôm dây thể thao</p>
+                            <span class = "fw-bold">6.290.000₫</span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal7">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal3 -->
+                                <div class="modal" id="videoModal7" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2Cn4_yjsyUM?si=s45Ol7oXjY9m6rn7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sản phẩm 8 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "./SanPham8.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Tai nghe Bluetooth True Wireless AVA+ Buds Life Air 2</p>
+                            <span class = "fw-bold">390.000₫</span>
+                            <div class="container mt-5">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal8">Review</button>
+                                <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                                <!-- Modal3 -->
+                                <div class="modal" id="videoModal8" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Embed video here -->
+                                                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/pnEF_aXJ9JY?si=82NQcxdzUmjCvaLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Nhập thông tin</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                    <div class="form-group">
+                                                    <label for="name">Tên:</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="comment">Nhận xét:</label>
+                                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Success Message -->
+                                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                    Bạn đã gửi nhận xét thành công!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of collection -->
+
+    <!-- special products -->
+    <section id = "special" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">SPECIALS 12/12</h2>
+            </div>
+            <!--sản phẩm 9 -->
+            <div class = "special-list row g-0">
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "./SanPham9.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Xiaomi 13T 5G 8GB</p>
+                        <span class = "fw-bold d-block">10.490.000₫</span>
+                        <div class="container mt-5">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal9">Review</button>
+                            <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                            <!-- Modal3 -->
+                            <div class="modal" id="videoModal9" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Embed video here -->
+                                            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/gzTG0-_uBoo?si=HM2saTL5EJettrnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Nhập thông tin</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                            <div class="modal-body">
+                                                <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                <div class="form-group">
+                                                <label for="name">Tên:</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Nhận xét:</label>
+                                                <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Gửi</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                Bạn đã gửi nhận xét thành công!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sản phẩm 10 -->
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "./SanPham10.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Laptop Lenovo LOQ Gaming 15IRH8</p>
+                        <span class = "fw-bold d-block">29.290.000₫</span>
+                        <div class="container mt-5">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal10">Review</button>
+                            <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                            <!-- Modal3 -->
+                            <div class="modal" id="videoModal10" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Embed video here -->
+                                            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aS_VoB9EFpI?si=BhijyPvoYzi-mTA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Nhập thông tin</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                            <div class="modal-body">
+                                                <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                <div class="form-group">
+                                                <label for="name">Tên:</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Nhận xét:</label>
+                                                <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Gửi</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                Bạn đã gửi nhận xét thành công!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sản phẩm 11 -->
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "./SanPham11.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Laptop Asus Gaming ROG Strix SCAR 18</p>
+                        <span class = "fw-bold d-block">111.990.000₫</span>
+                        <div class="container mt-5">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal11">Review</button>
+                            <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                            <!-- Modal3 -->
+                            <div class="modal" id="videoModal11" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Embed video here -->
+                                            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/C6zUqA9Vgt0?si=SsgPwB2jbwD7CH_-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Nhập thông tin</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                            <div class="modal-body">
+                                                <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                <div class="form-group">
+                                                <label for="name">Tên:</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Nhận xét:</label>
+                                                <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Gửi</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                Bạn đã gửi nhận xét thành công!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sản phẩm 12 -->
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "./SanPham12.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Samsung Galaxy Watch5 40mm </p>
+                        <span class = "fw-bold d-block">4.790.000₫</span>
+                        <div class="container mt-5">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal12">Review</button>
+                            <button class="btn btn-primary" onclick="openForm()">Đánh Giá</button>
+                            <!-- Modal3 -->
+                            <div class="modal" id="videoModal12" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Embed video here -->
+                                            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/7x0BrG0p7bY?si=xzpvZP0iPMVzGniV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="formModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Nhập thông tin</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                            <div class="modal-body">
+                                                <form id="feedbackForm" onsubmit="submitForm(event)">
+                                                <div class="form-group">
+                                                <label for="name">Tên:</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Nhận xét:</label>
+                                                <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Gửi</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+                                Bạn đã gửi nhận xét thành công!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of special products -->
+
+    <!-- blogs -->
+    <section id = "offers" class = "py-5">
+        <div class = "container">
+            <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+                <div class = "offers-content">
+                    <span class = "text-white">Chúng Tôi Luôn Cung Cấp Dịch Vụ Tốt <br>Nhất Cho Người Dùng</span>
+                    <h2 class = "mt-2 mb-4 text-white">Peak</h2>
+                    <a href = "#" class = "btn">Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+    <!-- blogs -->
+    <section id = "blogs" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">Celebrity reviews</h2>
+            </div>
+            <div class = "row g-3">
+                <!--sản phẩm 13 -->
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "./SanPham1.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">iPhone 15 Pro Max</h4>
+                        <p class = "card-text mt-3 text-muted"> Sau khi Apple ra mắt iPhone 15 Pro Max tại sự kiện Wonderlust, chiếc iPhone này đã nhận được nhiều sự quan tâm của người dùng nhờ vào những nâng cấp ấn tượng so với thế hệ trước. Vậy thiết kế iPhone 15 Pro Max có gì mới? iPhone 15 Pro Max hiệu năng mạnh thế nào? iPhone 15 Pro Max camera chụp ảnh đẹp không? Cùng mình đến với bài đánh giá iPhone 15 Pro Max để tìm hiểu thêm về chiếc điện thoại này nhé!.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Tác Giả : </span>Lã Việt Hoàng
+                            </small>
+                        </p>
+                        <!-- Modal3 -->
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal12">Review</button>
+                        <div class="modal" id="videoModal12" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Embed video here -->
+                                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/nrJUVfYsuWg?si=TUm6WiSa9agDcaFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sản phẩm 14 -->
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "./SanPham4.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">MacBook Pro 13 inch M2 2022</h4>
+                        <p class = "card-text mt-3 text-muted">Sở hữu thiết kế thanh lịch, sang trọng cùng hiệu năng vượt trội đến từ bộ vi xử lý Apple M2 tân tiến, Macbook Pro M2 hứa hẹn sẽ đáp ứng hoàn hảo cho người dùng sáng tạo, phục vụ tốt cho các nhu cầu thiết kế đồ họa nâng cao.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Tác Giả :  </span>Lã Việt Hoàng
+                            </small>
+                        </p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal4">Review</button>
+                        <div class="modal" id="videoModal4" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Embed video here -->
+                                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/XsiztZEoStM?si=meAZqBE0gZ_coKa9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sản phẩm 15 -->
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "./SanPham3.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">Laptop Asus TUF Gaming F15 FX507ZC4</h4>
+                        <p class = "card-text mt-3 text-muted">Có thể nói Asus TUF F5 FX507 là một viên ngọc sáng trong dòng laptop gaming ở phân khúc tầm trung, mang trong mình con chip CPU Intel Gen 12th và GPU Nvidia Geforce RTX 30 series, cùng với màn hình FHD IPS và độ phân giải 144Hz. Chỉ cần nghe sơ qua cũng đã thấy độ khủng của chiếc laptop này, nếu bạn cảm thấy hứng thú với chiếc laptop này thì ngay bây giờ hãy cùng LAPTOPNEW khám phá trong bài viết dưới đây nhé!.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Tác Giả : </span>Đào Duy Mạnh
+                            </small>
+                        </p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#videoModal3">Review</button>
+                        <div class="modal" id="videoModal3" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Chúc Bạn Xem Review Vui Vẻ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Embed video here -->
+                                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/4i_2YbwAU3o?si=vle685rEyfZsvscN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+    <!-- about us -->
+    <section id = "about" class = "py-5">
+        <div class = "container">
+            <div class = "row gy-lg-5 align-items-center">
+                <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class = "title pt-3 pb-5">
+                        <h2 class = "position-relative d-inline-block ms-4">About Us</h2>
+                    </div>
+                    <p class = "lead text-muted">The company itself is a very successful one. For us, customers always come first.</p>
+                    <p>The company itself is a very successful one. Flee from the pleasures of flattery, the training of manners will follow! If the accusers wanted to deny themselves the pleasures of the body with less labor, no one, not even us, would spare any of them.</p>
+                </div>
+                <div class = "col-lg-6 order-lg-0">
+                    <img src = "./logo.png" alt = "" class = "img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about us -->
+
+    <!-- newsletter -->
+    <section id = "newsletter" class = "py-5">
+        <div class = "container">
+            <div class = "d-flex flex-column align-items-center justify-content-center">
+                <div class = "title text-center pt-3 pb-5">
+                    <h2 class = "position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+                </div>
+
+                <p class = "text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem officia accusantium maiores quisquam dolorum?</p>
+                <div class = "input-group mb-3 mt-3">
+                    <input type = "text" class = "form-control" placeholder="Enter Your Email ...">
+                    <button class = "btn btn-primary" type = "submit" onclick="showNotification()">send me</button>
+                    <div id="notification">Khi có bài Review mới, chúng tôi sẽ thông báo cho bạn qua Gmail.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of newsletter -->
+
+    
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a class="text-uppercase text-decoration-none brand text-white" href="index.html">Attire</a>
+                </div>
+    
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light">Links</h5>
+                    
+                </div>
+    
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Contact Us</h5>
+                    
+                </div>
+    
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Follow Us</h5>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+    <script src="./thujs.js"></script>
+</body>
+</html>
